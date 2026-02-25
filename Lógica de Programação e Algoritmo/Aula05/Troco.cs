@@ -1,0 +1,11 @@
+using static System.Console;
+using System;
+double preco, quantidade, valorDado, troco;
+Write("Digite o preço do produto: ");
+preco = double.Parse(ReadLine());
+Write("Digite a quantidade de produtos: ");
+quantidade = double.Parse(ReadLine());
+Write("Digite o valor dado pelo cliente: ");
+valorDado = double.Parse(ReadLine());
+troco = valorDado - (preco * quantidade);
+Write($"Preço unitário: {preco}, Quantidade: {quantidade}, Dinheiro recebido: {valorDado}, Troco: {troco}");
