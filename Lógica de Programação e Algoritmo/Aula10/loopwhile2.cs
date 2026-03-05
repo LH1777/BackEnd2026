@@ -8,13 +8,14 @@ string movimento;
 
 while (registros < 3)
 {
-    Write("Digite o movimento do carro (entrando/saida): ");
+    Write("Digite o movimento do carro (entrando/saindo): ");
     movimento = ReadLine().ToLower();
 
     // valida o movimento
-    if (movimento != "entrando" && movimento != "saida")
+    if (movimento != "entrando" && movimento != "saindo")
     {
-        WriteLine("Movimento inválido! Digite apenas 'entrando' ou 'voltando'.");
+        WriteLine("Movimento inválido! Digite apenas 'entrando' ou 'saindo'.");
+        Beep(1000, 1000);
         continue;
     }
 
@@ -25,6 +26,7 @@ while (registros < 3)
     if (turistas < 0 || turistas > 4)
     {
         WriteLine("Número de turistas inválido! Máximo permitido é 4.");
+        Beep(1000, 1000);
         continue;
     }
 
@@ -34,12 +36,12 @@ while (registros < 3)
         turistasNoParque += turistas;
         WriteLine("O Fiat Uno está entrando no parque.");
     }
-    else if (movimento == "saida")
+    else if (movimento == "saindo")
     {
         if (turistas <= turistasNoParque)
         {
             turistasNoParque -= turistas;
-            WriteLine("O Fiat Uno está voltando do parque.");
+            WriteLine("O Fiat Uno está saindo do parque.");
         }
         else
         {
