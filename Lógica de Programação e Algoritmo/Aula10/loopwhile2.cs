@@ -1,4 +1,5 @@
 using static System.Console;
+using System.Media;
 
 int registros = 0;
 int turistas;
@@ -15,7 +16,7 @@ while (registros < 3)
     if (movimento != "entrando" && movimento != "saindo")
     {
         WriteLine("Movimento inválido! Digite apenas 'entrando' ou 'saindo'.");
-        Beep(1000, 1000);
+        Beep(1000, 500);
         continue;
     }
 
