@@ -3,9 +3,9 @@ using static System.Console;
 //------------------Declaração de variáveis------------
 int codigo, quantidade;
 //------------------Entrada de dados-------------------
-Write("Digite o código do produto: ")
+Write("Digite o código do produto: ");
 codigo = int.Parse(ReadLine());
-Write("Digite a quantidade de produto: ")
+Write("Digite a quantidade de produto: ");
 quantidade = int.Parse(ReadLine());
 switch (codigo)
 {
